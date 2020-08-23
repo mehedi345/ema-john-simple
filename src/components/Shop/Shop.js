@@ -3,7 +3,7 @@ import './Shop.css';
 
 import fakeData from '../../fakeData';
 
-
+import Product from '../Product/Product'
 
 const Shop = () => {
     
@@ -14,13 +14,14 @@ const Shop = () => {
             <div className="products-container">
             <ul>
                 {
-                    products.map(product => <li>{product.name}</li>)
+                    products.map(product => <Product product={product}>{product.name}</Product>)
                 }
             </ul>
             </div>
             <div className="cart-container">
                 <h2>this is container</h2>
             </div>
+           
         </div>
     );
 };
