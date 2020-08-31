@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Cart = (props) => {
     const cart = props.cart;
-    //const total =cart.reduce( (total, product) => total + product.price, 0);
+    // const total =cart.reduce( (total, product) => total + product.price, 0);
     let total = 0;
     for (let i = 0; i < cart.length; i++) {
         const product = cart[i];
@@ -21,7 +21,7 @@ const Cart = (props) => {
     }
 
     const tax = Math.round(total / 10);
-    const grandtotal = total + shipping + tax
+    const grandtotal = total + shipping + tax ;
     return (
         <div>
             <h2>Order Summary</h2>
